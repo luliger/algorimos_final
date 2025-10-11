@@ -2,19 +2,22 @@ PImage img;
 int i = 0;
 int r, g, b;
 color c;
-int posX = 40, posY = 40;
+int posX = 25, posY = 25;
+int nroColumna = 0;
+int nroFila= 0;
+int tamanioMatriz = 34;
+int tamanioCuadrado = 25;
+int distanciaCuadrados = 2;
+int margen = 25;
 
 int imgN = 0;
 
 void setup(){
-  //img = loadImage("color_bar_test.png");
-  //img = loadImage("imagen_colores.png");
-  //img = loadImage("imagen2.png");
-  //img = loadImage("IMG_20221230_162549.jpg"); //york
+  img = loadImage("IMG_20221230_162549.jpg"); //york
   //img = loadImage("IMG_9414.JPG"); //londres
-  img = loadImage("100_4082.JPG"); //cj
+  //img = loadImage("100_4082.JPG"); //cj
   
-  size(800, 800);
+  size(1000, 1000);
   background(0);
 }
 
@@ -32,19 +35,24 @@ void draw(){
     c = color(r, g, b);
     
     fill(c); 
-    rect(posX, posY, 20, 20);
+    rect(posX, posY, tamanioCuadrado, tamanioCuadrado);
+    nroColumna++;
+    
     
     i+= random(30);
     
-    if (posX > width-60){
-      posX = 40;
-      posY += 22;
+    if (nroColumna > tamanioMatriz){
+      posX = margen;
+      posY += tamanioCuadrado + distanciaCuadrados;
+      nroColumna = 0;
+      nroFila++;
     } else {
-      posX += 22;
+      posX += tamanioCuadrado + distanciaCuadrados;
     }
     
-    if (posY > height-60){
-      posY = 40;
+    if (nroFila > tamanioMatriz){
+      posY = margen;
+      nroFila = 0;
     }
     
    } else {
