@@ -6,11 +6,13 @@ int pos = 612;
 int tamanioCuadrado = 25;
 int distanciaCuadrados = 2;
 int margen = 25;
-int idir;
 
 int imgN = 0;
 
-int[][] posiciones = new int[1225][2];
+int[][] posiciones;
+
+int n = 0;
+Boolean[] ocupados = new Boolean[1225];
 
 void setup() {
   img = loadImage("IMG_20221230_162549.jpg"); //york
@@ -21,7 +23,7 @@ void setup() {
   background(0);
 
   posiciones = generarMatriz();
-  //boolean[] ocupados = new boolean[1225];
+  ocupados = llenarArrayFalse(ocupados);
 }
 
 void draw() {
@@ -37,10 +39,27 @@ void draw() {
 
     c = color(r, g, b);
 
-    fill(c); 
+    fill(c);
+    
+    if (n < 1224){
+      while (ocupados[pos] == true) {
+        pos = int(random(1225));
+      } 
+    } else {
+      n = 0;
+      ocupados = llenarArrayFalse(ocupados);
+      saveFrame("imagen_"+imgN+".png");
+      imgN++;
+      pos = int(random(1225));
+    }
+    
     rect(posiciones[pos][0], posiciones[pos][1], tamanioCuadrado, tamanioCuadrado);
     
-    i+=25;
+    i+=40;
+    
+    n++;
+    
+    ocupados[pos] = true;
     pos = int(random(1225));
     
     
@@ -89,4 +108,14 @@ int[][] generarMatriz() {
   }
 
   return posiciones;
+}
+
+Boolean[] llenarArrayFalse(Boolean[] array){
+
+  for (int i = 0; i < array.length; i++) {
+    array[i] = false;
+  }
+  
+  return array;
+
 }
