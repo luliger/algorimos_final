@@ -2,13 +2,17 @@ PImage img;
 int i = 0;
 int r, g, b;
 color c;
-int posX = 25, posY = 25;
+
+int margen = -5;
+int posX, posY = margen;
 int nroColumna = 0;
 int nroFila= 0;
-int tamanioMatriz = 34;
+int tamanioMatriz = 42;
 int tamanioCuadrado = 25;
-int distanciaCuadrados = 2;
-int margen = 25;
+int distanciaCuadrados = 0;
+
+
+int size = 25;
 
 int imgN = 0;
 
@@ -34,10 +38,15 @@ void draw(){
     
     c = color(r, g, b);
     
+    noStroke();
+    fill(0, 50); 
+    rect(posX-1, posY-1, size+6, size+6);
+    
     fill(c); 
-    rect(posX, posY, tamanioCuadrado, tamanioCuadrado);
+    rect(posX, posY, size, size);
     nroColumna++;
     
+    size = 25 + int(random(-10, 10));
     
     i+= random(30);
     
