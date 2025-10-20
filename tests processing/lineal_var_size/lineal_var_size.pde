@@ -17,18 +17,18 @@ int size = 25;
 int imgN = 0;
 
 void setup(){
-  img = loadImage("IMG_20221230_162549.jpg"); //york
+  //img = loadImage("IMG_20221230_162549.jpg"); //york
   //img = loadImage("IMG_9414.JPG"); //londres
-  //img = loadImage("100_4082.JPG"); //cj
+  img = loadImage("100_4082.JPG"); //cj
   
   size(1000, 1000);
   background(0);
-}
-
-void draw(){
   
   img.loadPixels();
   img.resize(300, 0);
+}
+
+void draw(){
 
    if (i < img.pixels.length){
    
@@ -39,8 +39,8 @@ void draw(){
     c = color(r, g, b);
     
     noStroke();
-    fill(0, 50); 
-    rect(posX-1, posY-1, size+6, size+6);
+    fill(0, 60); 
+    rect(posX-2, posY-4, size+10, size+10);
     
     fill(c); 
     rect(posX, posY, size, size);
@@ -48,7 +48,7 @@ void draw(){
     
     size = 25 + int(random(-10, 10));
     
-    i+= random(30);
+    i+= random(10);
     
     if (nroColumna > tamanioMatriz){
       posX = margen;
@@ -62,6 +62,8 @@ void draw(){
     if (nroFila > tamanioMatriz){
       posY = margen;
       nroFila = 0;
+      saveFrame("imagen_"+imgN+".png");
+      imgN++;
     }
     
    } else {

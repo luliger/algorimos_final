@@ -15,21 +15,23 @@ int n = 0;
 Boolean[] ocupados = new Boolean[1225];
 
 void setup() {
-  img = loadImage("IMG_20221230_162549.jpg"); //york
+  //img = loadImage("IMG_20221230_162549.jpg"); //york
   //img = loadImage("IMG_9414.JPG"); //londres
-  //img = loadImage("100_4082.JPG"); //cj
+  img = loadImage("100_4082.JPG"); //cj
 
   size(1000, 1000);
   background(0);
 
   posiciones = generarMatriz();
   ocupados = llenarArrayFalse(ocupados);
+  
+  img.loadPixels();
+  img.resize(300, 0);
 }
 
 void draw() {
 
-  img.loadPixels();
-  img.resize(300, 0);
+  
 
   if (i < img.pixels.length) {
 
@@ -55,7 +57,7 @@ void draw() {
     
     rect(posiciones[pos][0], posiciones[pos][1], tamanioCuadrado, tamanioCuadrado);
     
-    i+=40;
+    i+=10;
     
     n++;
     
