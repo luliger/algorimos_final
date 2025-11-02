@@ -30,7 +30,7 @@ void setup(){
   background(0);
   noStroke();
   
-  //se camibia el tamanio de la imagen y se cargan los pixeles de la misma en un array
+  //se cambia el tamanio de la imagen y se cargan los pixeles de la misma en un array
   img.resize(300, 0);
   img.loadPixels();
   
