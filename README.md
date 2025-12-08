@@ -1,3 +1,5 @@
+###Entrega cursada
+
 #### Informe escrito
 [Link](https://drive.google.com/file/d/1tmuNL8twy8JCQcUqtQSkP4mLwUw7O5P8/view) al pdf.
 
@@ -11,3 +13,5 @@ Incluye archivo de processing, y las fotos utilizadas en los ejemplos.
 #### Imagenes anexos
 [Link](https://github.com/luliger/algorimos_final/tree/main/anexos) a las imagenes del anexo.\
 Incluye diagrama de flujo del algoritmo, propuestas composición final de las imagenes y carpeta con la referencias mencionadas en el informe.
+
+###Entrega final
