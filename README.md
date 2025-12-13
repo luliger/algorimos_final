@@ -20,10 +20,10 @@ Incluye diagrama de flujo del algoritmo, propuestas composición final de las im
 [Link](https://drive.google.com/file/d/1Mft9yFkLrewgQfdgnvooE8XXZUZR-Ufa/view) al pdf.
 
 #### Video
-[Link]() al video.
+[Link](https://youtu.be/Y5awGiDf8SY) al video.
 
 #### Codigo
-[Link]() a la carpeta comprimida.\
+[Link](https://drive.google.com/file/d/1sHAKYYbGm9_5xYeey8LCcBvjVhtrF3Ik/view) a la carpeta comprimida.\
 Incluye archivo de processing, y las fotos utilizadas en los ejemplos.
 
 #### Imagenes anexos
